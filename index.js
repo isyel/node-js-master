@@ -9,7 +9,7 @@ const http = require("http");
 const https = require("https");
 const url = require("url");
 const StringDecoder = require("string_decoder").StringDecoder;
-var config = require("./config");
+var config = require("./lib/config");
 var fs = require("fs");
 // var _data = require("./lib/data");
 
@@ -19,6 +19,7 @@ var fs = require("fs");
 //   console.log("this was the error", err);
 // });
 var handlers = require("./lib/handlers");
+const helpers = require("./lib/helpers");
 
 // instantiate the http server
 const httpServer = http.createServer((req, res) => {
@@ -82,7 +83,7 @@ const unifiedServer = (req, res) => {
       queryStringObject,
       method,
       headers,
-      payload: buffer,
+      payload: helpers.parseJsonToObject(buffer),
     };
 
     // Route the request to the handler specified in the router
