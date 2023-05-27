@@ -1,0 +1,38 @@
+<html>
+
+<head>
+    <!-- General Settings-->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="content-language" content="en-us" />
+    <base href="{global.baseUrl}" />
+
+    <!-- Meta Tags -->
+    <title>{head.title} | {global.appName}</title>
+    <meta name="description" content="{head.description}" />
+
+    <!-- Static Assets -->
+    <link type="image/x-icon" rel="icon" href="favicon.ico" />
+    <script type="text/javascript" charset="utf-8" src="public/app.js"></script>
+    <link type="text/css" rel="stylesheet" href="public/app.css" />
+</head>
+
+<body class="{body.class}">
+    <!-- Page Wrapper -->
+    <div class="wrapper"></div>
+
+    <!-- Header -->
+    <div class="header">
+        <a href="/" class="logo"></a>
+        <ul class="menu">
+            <li><a href="/">Home</a></li>
+            <li class="loggedOut"><a href="/about">Signup</a></li>
+            <li class="loggedOut"><a href="/about">Login</a></li>
+            <li class="loggedIn"><a href="/about">Dashboard</a></li>
+            <li class="loggedIn"><a href="/about">Account Settings</a></li>
+            <li class="loggedIn"><a href="/about">Logout</a></li>
+        </ul>
+    </div>
+
+    <!-- Page Specific Content -->
+    <div>
